@@ -14,6 +14,8 @@
 - Stage history is recorded.
 - Dashboard counts are based on real database data.
 - UI is usable and built with shadcn/ui.
+- Frontend and backend are deployed to Cloudflare.
+- Candidate's README includes deployed app URL and Worker/API URL.
 - Candidate's README explains setup, environment variables, migrations, seeds, and demo users.
 
 ## Strong Submission
@@ -26,6 +28,7 @@
 - TanStack Query is used consistently.
 - Loading, empty, and error states are handled.
 - Code is modular and easy to review.
+- Deployed version works during the video demo.
 - README includes setup, env vars, migrations, seeds, and demo users.
 
 ## Suggested Scoring

@@ -16,6 +16,8 @@ Please complete the project in this repo before continuing with the hiring proce
 - Fork this repo or create your own public GitHub repo for your solution.
 - Build the project in your own repo.
 - Keep your commits readable so we can review your work.
+- Deploy the frontend and backend to Cloudflare.
+- Include the deployed app URL and Worker/API URL in your submitted README.
 - Be ready to explain your code during the meeting.
 
 ## AI Tools
@@ -45,6 +47,7 @@ This is intended to be completed in about one week with AI assistance. Focus on 
 - Manager can reassign conversations and deals.
 - Pipeline board shows real deal data.
 - UI is clean and usable.
+- Frontend and backend are deployed to Cloudflare.
 
 Keep the implementation practical. Drag and drop, complex reporting, email, file upload, payments, and advanced notifications are optional or out of scope.
 
