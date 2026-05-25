@@ -1,5 +1,22 @@
 # Full Stack Project: Student CRM + Chat + Deal Pipeline
 
+## Test of Competence
+
+Please complete the project in this repo before continuing with the hiring process.
+
+- Position: Full stack developer
+- Repo: `sinc-dev/developer-test-of-competence`
+- Deadline: 1st June, 2026
+- Submit your completed work here: [Google Form](https://forms.gle/DngbHjuZyfX4b3kr9)
+- When you are done, book a meeting here: [Calendar booking](https://calendar.app.google/gaVmDsdiUvNngbcK8)
+
+The form asks for:
+
+- Position
+- Full name
+- Email address
+- Short video demo, max 100 MB
+
 Build a small CRM for an education sales team. Clients can log in and chat. Sales users can manage chat conversations, create deals for clients, assign deal owners, and move deals through a pipeline.
 
 ## Target
@@ -42,4 +59,3 @@ Build a small CRM for an education sales team. Clients can log in and chat. Sale
 - [api.md](./api.md)
 - [ui-wireframes.md](./ui-wireframes.md)
 - [evaluation.md](./evaluation.md)
-
