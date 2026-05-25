@@ -2,7 +2,7 @@
 
 ## Required To Pass
 
-- App runs locally from README instructions.
+- Submitted app runs locally from the candidate's README instructions.
 - Supabase Auth works.
 - Client can create and use chat.
 - Sales user can assign and reply to conversations.
@@ -14,6 +14,7 @@
 - Stage history is recorded.
 - Dashboard counts are based on real database data.
 - UI is usable and built with shadcn/ui.
+- Candidate's README explains setup, environment variables, migrations, seeds, and demo users.
 
 ## Strong Submission
 
@@ -39,7 +40,7 @@
 | Pipeline stages/history | 15 |
 | Dashboard | 10 |
 | UI quality | 5 |
-| README/setup | 5 |
+| Candidate README/setup | 5 |
 
 Total: 100
 
@@ -51,4 +52,3 @@ Total: 100
 - What queries need indexes and why?
 - How are realtime subscriptions cleaned up?
 - What would you improve with another week?
-

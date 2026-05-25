@@ -56,7 +56,7 @@
 - Dashboard with counts by stage and owner.
 - shadcn/ui-based UI.
 - Seed data.
-- README with setup instructions.
+- A submitted project README with setup instructions, environment variables, migrations, seeds, and demo users.
 
 ## Nice To Have
 
@@ -73,7 +73,6 @@
 - Email.
 - Payments.
 - AI chatbot.
-- Calendar booking.
+- In-app calendar booking.
 - Multi-company support.
 - Complex reporting.
-
