@@ -9,10 +9,10 @@ function Auth() {
   const [mode, setMode] = useState('login');
 
   return (
-    <div className="flex min-h-screen font-[family-name:var(--font-family-main)]">
-      {/* Left side with background image */}
+    <div className="flex flex-col md:flex-row min-h-screen font-[family-name:var(--font-family-main)]">
+      {/* Left side with background image - hidden on mobile */}
       <div
-        className="w-1/2 flex items-center justify-center"
+        className="hidden md:flex md:w-1/2 items-center justify-center"
         style={{
           backgroundImage: `url('${bgLog}')`,
           backgroundRepeat: 'no-repeat',
@@ -47,16 +47,17 @@ function Auth() {
         </div>
       </div>
 
-      {/* Right side for signup/login */}
-      <div className="w-1/2 bg-tertiary p-10 flex flex-col">
-        {/* Header */}
-        <nav className='flex justify-start items-center gap-3 mb-12'>
-          <img className='w-10 h-10' src={schoolIcon} alt="Log" />
-          <h1 className='text-neutral text-2xl font-bold'>EduFlow CRM</h1>
-        </nav>
+      {/* Right side for signup/login - full width on mobile, half on desktop */}
+      <div className="w-full md:w-1/2 bg-tertiary flex flex-col">
+        <div className="container flex flex-col h-full">
+          {/* Header */}
+          <nav className='flex justify-start items-center gap-3 p-5 mb-8 md:mb-12'>
+            <img className='w-8 md:w-10 h-8 md:h-10' src={schoolIcon} alt="Log" />
+            <h1 className='text-neutral text-xl md:text-2xl font-bold'>EduFlow CRM</h1>
+          </nav>
 
-        {/* Form centered */}
-        <div className='flex flex-col items-center justify-center flex-1'>
+          {/* Form centered */}
+          <div className='flex flex-col items-center justify-center flex-1'>
           {/* Tabs */}
           <div className='flex items-center justify-center gap-1 mb-8 bg-[#DCE9FF] rounded-lg p-1'>
             <button 
@@ -72,14 +73,14 @@ function Auth() {
           </div>
 
           {/* Form card */}
-          <div className="w-full items-center max-w-sm">
+          <div className="w-full px-4 md:px-0 items-center max-w-sm">
             {/* Login Form */}
             {mode === 'login' && (
               <>
-                <h1 className='text-3xl pb-5 font-bold'>
+                <h1 className='text-2xl md:text-3xl pb-4 md:pb-5 font-bold'>
                   Welcome Back
                 </h1>
-                <div className="flex flex-col gap-4 bg-white p-8 rounded-2xl font-sans shadow-lg">
+                <div className="flex flex-col gap-3 md:gap-4 bg-white p-6 md:p-8 rounded-2xl font-sans shadow-lg">
 
                   {/* Email */}
                   <div className="flex flex-col">
@@ -166,10 +167,10 @@ function Auth() {
             {/* Signup Form */}
             {mode === 'signup' && (
               <div>
-                <h1 className='text-3xl pb-5 font-bold'>
+                <h1 className='text-2xl md:text-3xl pb-4 md:pb-5 font-bold'>
                   Create Account
                 </h1>
-                <div className="flex flex-col gap-4 bg-white p-8 rounded-2xl font-sans shadow-lg">
+                <div className="flex flex-col gap-3 md:gap-4 bg-white p-6 md:p-8 rounded-2xl font-sans shadow-lg">
 
                   {/* First Name */}
                   <div className="flex flex-col">
@@ -262,6 +263,7 @@ function Auth() {
               </div>
             )}
           </div>
+        </div>
         </div>
       </div>
     </div>
