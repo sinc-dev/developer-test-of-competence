@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+/* 2. Tailwind theme configurations */
+@theme {
+  --color-primary: #2563EB;
+  --color-secondary: #0D9488;
+  --color-tertiary: #F8FAFC; 
+  --color-neutral: #0F172A;
+
+  --font-family-main: "SN Pro", sans-serif;
+  --font-family-geist: "Geist", sans-serif;
+}
+
+/* 3. Your custom CSS variables */
+:root {
+  --primary-color: #2563EB;
+  --secondary-color: #0D9488;
+  --tertiary-color: #F8FAFC; 
+  --neutral-color: #0F172A; 
+
+  --font-main: "SN Pro", sans-serif;
+}
+
+
+/* ----RESPONSIVE---- */
+
+        @utility container {
+          margin-inline: auto;
+          padding-inline: 2rem;
+        
+          @media (width >= 640px) {
+            max-width: 640px;
+          }
+          @media (width >= 768px) {
+            max-width: 768px;
+          }
+          @media (width >= 1024px) {
+            max-width: 1024px;
+          }
+          @media (width >= 1280px) {
+            max-width: 1280px;
+          }
+          @media (width >= 1400px) {
+            max-width: 1400px;
+          }
+        }
