@@ -1,7 +1,9 @@
 import { useState } from "react";
-import accounIcon from '../../public/account.svg'
 import schoolIcon from '../../public/school.svg';
 import dashboardIcon from '../../public/dashboard.svg'
+import messageIcon from '../../public/message.svg'
+import pipelineIcon from '../../public/Pipeline.svg'
+import helpIcon from '../../public/help.svg'
 
 type NavItem = {
   id: string;
@@ -20,26 +22,17 @@ const navSections: NavSection[] = [
   {
     items: [
       { id: "dashboard", label: "Dashboard", icon: dashboardIcon },
-      { id: "analytics", label: "Analytics", icon: "ti-chart-bar", badge: 3 },
-      { id: "projects", label: "Projects", icon: "ti-folder" },
+      { id: "messages", label: "Messages", icon: messageIcon , },
+      { id: "pipline", label: "Pipline", icon: pipelineIcon  },  
+
     ],
   },
   {
-    title: "Manage",
-    items: [
-      { id: "team", label: "Team", icon: "ti-users" },
-      { id: "calendar", label: "Calendar", icon: "ti-calendar" },
-      { id: "messages", label: "Messages", icon: "ti-message", badge: 12 },
-      { id: "files", label: "Files", icon: "ti-file" },
+    title:"Account",
+    items:[
+      { id:"account" , label: "Help Center" , icon: helpIcon}
     ],
-  },
-  {
-    title: "Account",
-    items: [
-      { id: "settings", label: "Settings", icon: accounIcon },
-      { id: "help", label: "Help", icon: "ti-help-circle" },
-    ],
-  },
+  }
 ];
 
 type VerticalNavbarProps = {
@@ -124,15 +117,24 @@ export default function VerticalNavbar({
                   {/* Active indicator bar */}
                   {isActive && (
                     <span
-                      className="absolute left-0 top-[20%] h-[60%] w-[2.5px] rounded-r-sm bg-blue-500"
+                      className="absolute left-0 top-[20%] h-[60%] w-[2.5px] rounded-r-sm bg-secondary"
                       aria-hidden="true"
                     />
                   )}
 
-                  <i
-                    className={`ti ${item.icon} text-[18px] shrink-0 ${isActive ? "text-blue-500" : ""}`}
-                    aria-hidden="true"
-                  />
+                  {item.icon.startsWith("ti-") ? (
+                    <i
+                      className={`ti ${item.icon} text-lg shrink-0 ${isActive ? "text-gray-900" : "text-gray-500"}`}
+                      aria-hidden="true"
+                    />
+                  ) : (
+                    <img
+                      src={item.icon}
+                      alt=""
+                      aria-hidden="true"
+                      className="w-5 h-5 shrink-0 object-contain"
+                    />
+                  )}
 
                   {!collapsed && (
                     <>
@@ -167,7 +169,7 @@ export default function VerticalNavbar({
         `}
       >
         <div
-          className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-xs font-medium text-green-700 flex-shrink-0"
+          className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center text-xs font-medium text-green-700 shrink-0"
           aria-hidden="true"
         >
           JD
@@ -191,7 +193,7 @@ export default function VerticalNavbar({
         className={`
           border-t border-gray-200 bg-transparent border-x-0 border-b-0
           cursor-pointer p-2.5 flex items-center
-          text-gray-400 hover:text-gray-900 transition-colors duration-[120ms]
+          text-gray-400 hover:text-gray-900 transition-colors duration-120
           ${collapsed ? "justify-center" : "justify-end pr-3.5"}
         `}
       >
